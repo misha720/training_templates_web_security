@@ -8,14 +8,14 @@
 <body>
 <h2>XSS Teplate</h2>
 
-<form action="" method="post">
+<form action="result.html" >
   <label for="fname">Login:</label><br>
   <input type="text" id="login" name="login"><br>
   <label for="lname">Password:</label><br>
   <input type="text" id="password" name="password"><br><br>
   <input type="submit" value="Submit">
 </form>
-<p><?php $_POST['login'] ?></p>
+
 
 <script>
 	document.getElementById('MyForm').addEventListener('submit', function(e) {
