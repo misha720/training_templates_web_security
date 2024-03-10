@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>XSS</title>
+</head>
+<body>
+<h2>XSS Teplate</h2>
+
+<form action="" method="post">
+  <label for="fname">Login:</label><br>
+  <input type="text" id="login" name="login"><br>
+  <label for="lname">Password:</label><br>
+  <input type="text" id="password" name="password"><br><br>
+  <input type="submit" value="Submit">
+</form>
+<p><?php $_POST['login'] ?></p>
+
+<script>
+	document.getElementById('MyForm').addEventListener('submit', function(e) {
+    // что бы не отправилась форма. 
+    e.preventDefault(); 
+    document.getElementById('name').innerHTML = document.getElementById('form-name').value
+</script>
+
+
+</body>
+</html>
